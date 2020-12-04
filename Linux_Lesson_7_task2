@@ -1,0 +1,301 @@
+ivanss@ivanss-VirtualBox:~$ sudo yum install yum-utils
+[sudo] пароль для ivanss: 
+sudo: yum: команда не найдена
+ivanss@ivanss-VirtualBox:~$ sudo apt install curl gnupg2 ca-certificates lsb-release
+Чтение списков пакетов… Готово
+Построение дерева зависимостей       
+Чтение информации о состоянии… Готово
+Уже установлен пакет lsb-release самой новой версии (11.1.0ubuntu2).
+lsb-release помечен как установленный вручную.
+Уже установлен пакет ca-certificates самой новой версии (20201027ubuntu0.20.04.1).
+ca-certificates помечен как установленный вручную.
+Следующие пакеты устанавливались автоматически и больше не требуются:
+  libfprint-2-tod1 linux-headers-5.4.0-42 linux-headers-5.4.0-42-generic
+  linux-image-5.4.0-42-generic linux-modules-5.4.0-42-generic
+  linux-modules-extra-5.4.0-42-generic
+Для их удаления используйте «sudo apt autoremove».
+Будут установлены следующие дополнительные пакеты:
+  libcurl4
+Следующие НОВЫЕ пакеты будут установлены:
+  curl gnupg2 libcurl4
+Обновлено 0 пакетов, установлено 3 новых пакетов, для удаления отмечено 0 пакетов, и 26 пакетов не обновлено.
+Необходимо скачать 167 kB/400 kB архивов.
+После данной операции объём занятого дискового пространства возрастёт на 1 166 kB.
+Хотите продолжить? [Д/н] y
+Пол:1 http://ru.archive.ubuntu.com/ubuntu focal-updates/main amd64 curl amd64 7.68.0-1ubuntu2.2 [161 kB]
+Пол:2 http://ru.archive.ubuntu.com/ubuntu focal/universe amd64 gnupg2 all 2.2.19-3ubuntu2 [5 316 B]
+Получено 167 kB за 1с (205 kB/s)
+Выбор ранее не выбранного пакета libcurl4:amd64.
+(Чтение базы данных … на данный момент установлено 199026 файлов и каталогов.)
+Подготовка к распаковке …/libcurl4_7.68.0-1ubuntu2.2_amd64.deb …
+Распаковывается libcurl4:amd64 (7.68.0-1ubuntu2.2) …
+Выбор ранее не выбранного пакета curl.
+Подготовка к распаковке …/curl_7.68.0-1ubuntu2.2_amd64.deb …
+Распаковывается curl (7.68.0-1ubuntu2.2) …
+Выбор ранее не выбранного пакета gnupg2.
+Подготовка к распаковке …/gnupg2_2.2.19-3ubuntu2_all.deb …
+Распаковывается gnupg2 (2.2.19-3ubuntu2) …
+Настраивается пакет gnupg2 (2.2.19-3ubuntu2) …
+Настраивается пакет libcurl4:amd64 (7.68.0-1ubuntu2.2) …
+Настраивается пакет curl (7.68.0-1ubuntu2.2) …
+Обрабатываются триггеры для man-db (2.9.1-1) …
+Обрабатываются триггеры для libc-bin (2.31-0ubuntu9.1) …
+ivanss@ivanss-VirtualBox:~$ echo "deb http://nginx.org/packages/ubuntu 'lsb_release -cs` nginx" \ | sudo tee /etc/apt/sources.list.d/nginx.list
+> ^C
+ivanss@ivanss-VirtualBox:~$ curl -fsSL https://nginx.org/keys/nginx_signing.key | sudo apt-key add -
+OK
+ivanss@ivanss-VirtualBox:~$ sudo apt-key fingerprint 
+/etc/apt/trusted.gpg
+--------------------
+pub   rsa2048 2011-08-19 [SC] [годен до: 2024-06-14]
+      573B FD6B 3D8F BC64 1079  A6AB ABF5 BD82 7BD9 BF62
+uid         [ неизвестно ] nginx signing key <signing-key@nginx.com>
+
+/etc/apt/trusted.gpg.d/ubuntu-keyring-2012-archive.gpg
+------------------------------------------------------
+pub   rsa4096 2012-05-11 [SC]
+      790B C727 7767 219C 42C8  6F93 3B4F E6AC C0B2 1F32
+uid         [ неизвестно ] Ubuntu Archive Automatic Signing Key (2012) <ftpmaster@ubuntu.com>
+
+/etc/apt/trusted.gpg.d/ubuntu-keyring-2012-cdimage.gpg
+------------------------------------------------------
+pub   rsa4096 2012-05-11 [SC]
+      8439 38DF 228D 22F7 B374  2BC0 D94A A3F0 EFE2 1092
+uid         [ неизвестно ] Ubuntu CD Image Automatic Signing Key (2012) <cdimage@ubuntu.com>
+
+/etc/apt/trusted.gpg.d/ubuntu-keyring-2018-archive.gpg
+------------------------------------------------------
+pub   rsa4096 2018-09-17 [SC]
+      F6EC B376 2474 EDA9 D21B  7022 8719 20D1 991B C93C
+uid         [ неизвестно ] Ubuntu Archive Automatic Signing Key (2018) <ftpmaster@ubuntu.com>
+
+ivanss@ivanss-VirtualBox:~$ sudo apt update
+Сущ:1 http://ru.archive.ubuntu.com/ubuntu focal InRelease
+Сущ:2 http://security.ubuntu.com/ubuntu focal-security InRelease              
+Пол:3 http://ru.archive.ubuntu.com/ubuntu focal-updates InRelease [114 kB]    
+Пол:4 http://ru.archive.ubuntu.com/ubuntu focal-backports InRelease [101 kB]
+Пол:5 http://ru.archive.ubuntu.com/ubuntu focal-updates/main amd64 Packages [691 kB]
+Пол:6 http://ru.archive.ubuntu.com/ubuntu focal-updates/main Translation-en [171 kB]
+Пол:7 http://ru.archive.ubuntu.com/ubuntu focal-updates/main amd64 DEP-11 Metadata [236 kB]
+Пол:8 http://ru.archive.ubuntu.com/ubuntu focal-updates/universe amd64 Packages [700 kB]
+Пол:9 http://ru.archive.ubuntu.com/ubuntu focal-updates/universe Translation-en [137 kB]
+Пол:10 http://ru.archive.ubuntu.com/ubuntu focal-updates/universe amd64 DEP-11 Metadata [205 kB]
+Пол:11 http://ru.archive.ubuntu.com/ubuntu focal-updates/multiverse amd64 DEP-11 Metadata [2 468 B]
+Пол:12 http://ru.archive.ubuntu.com/ubuntu focal-backports/universe amd64 DEP-11 Metadata [1 768 B]
+Получено 2 359 kB за 4с (626 kB/s)          
+Чтение списков пакетов… Готово
+Построение дерева зависимостей       
+Чтение информации о состоянии… Готово
+Может быть обновлено 26 пакетов. Запустите «apt list --upgradable» для их показа.
+ivanss@ivanss-VirtualBox:~$ sudo apt install nginx
+Чтение списков пакетов… Готово
+Построение дерева зависимостей       
+Чтение информации о состоянии… Готово
+Следующие пакеты устанавливались автоматически и больше не требуются:
+  libfprint-2-tod1 linux-headers-5.4.0-42 linux-headers-5.4.0-42-generic
+  linux-image-5.4.0-42-generic linux-modules-5.4.0-42-generic
+  linux-modules-extra-5.4.0-42-generic
+Для их удаления используйте «sudo apt autoremove».
+Будут установлены следующие дополнительные пакеты:
+  libnginx-mod-http-image-filter libnginx-mod-http-xslt-filter
+  libnginx-mod-mail libnginx-mod-stream nginx-common nginx-core
+Предлагаемые пакеты:
+  fcgiwrap nginx-doc
+Следующие НОВЫЕ пакеты будут установлены:
+  libnginx-mod-http-image-filter libnginx-mod-http-xslt-filter
+  libnginx-mod-mail libnginx-mod-stream nginx nginx-common nginx-core
+Обновлено 0 пакетов, установлено 7 новых пакетов, для удаления отмечено 0 пакетов, и 26 пакетов не обновлено.
+Необходимо скачать 602 kB архивов.
+После данной операции объём занятого дискового пространства возрастёт на 2 134 kB.
+Хотите продолжить? [Д/н] y
+Пол:1 http://ru.archive.ubuntu.com/ubuntu focal-updates/main amd64 nginx-common all 1.18.0-0ubuntu1 [37,3 kB]
+Пол:2 http://ru.archive.ubuntu.com/ubuntu focal-updates/main amd64 libnginx-mod-http-image-filter amd64 1.18.0-0ubuntu1 [14,3 kB]
+Пол:3 http://ru.archive.ubuntu.com/ubuntu focal-updates/main amd64 libnginx-mod-http-xslt-filter amd64 1.18.0-0ubuntu1 [12,6 kB]
+Пол:4 http://ru.archive.ubuntu.com/ubuntu focal-updates/main amd64 libnginx-mod-mail amd64 1.18.0-0ubuntu1 [42,3 kB]
+Пол:5 http://ru.archive.ubuntu.com/ubuntu focal-updates/main amd64 libnginx-mod-stream amd64 1.18.0-0ubuntu1 [66,9 kB]
+Пол:6 http://ru.archive.ubuntu.com/ubuntu focal-updates/main amd64 nginx-core amd64 1.18.0-0ubuntu1 [425 kB]
+Пол:7 http://ru.archive.ubuntu.com/ubuntu focal-updates/main amd64 nginx all 1.18.0-0ubuntu1 [3 624 B]
+Получено 602 kB за 1с (561 kB/s)
+Предварительная настройка пакетов …
+Выбор ранее не выбранного пакета nginx-common.
+(Чтение базы данных … на данный момент установлено 199045 файлов и каталогов.)
+Подготовка к распаковке …/0-nginx-common_1.18.0-0ubuntu1_all.deb …
+Распаковывается nginx-common (1.18.0-0ubuntu1) …
+Выбор ранее не выбранного пакета libnginx-mod-http-image-filter.
+Подготовка к распаковке …/1-libnginx-mod-http-image-filter_1.18.0-0ubuntu1_amd6
+4.deb …
+Распаковывается libnginx-mod-http-image-filter (1.18.0-0ubuntu1) …
+Выбор ранее не выбранного пакета libnginx-mod-http-xslt-filter.
+Подготовка к распаковке …/2-libnginx-mod-http-xslt-filter_1.18.0-0ubuntu1_amd64
+.deb …
+Распаковывается libnginx-mod-http-xslt-filter (1.18.0-0ubuntu1) …
+Выбор ранее не выбранного пакета libnginx-mod-mail.
+Подготовка к распаковке …/3-libnginx-mod-mail_1.18.0-0ubuntu1_amd64.deb …
+Распаковывается libnginx-mod-mail (1.18.0-0ubuntu1) …
+Выбор ранее не выбранного пакета libnginx-mod-stream.
+Подготовка к распаковке …/4-libnginx-mod-stream_1.18.0-0ubuntu1_amd64.deb …
+Распаковывается libnginx-mod-stream (1.18.0-0ubuntu1) …
+Выбор ранее не выбранного пакета nginx-core.
+Подготовка к распаковке …/5-nginx-core_1.18.0-0ubuntu1_amd64.deb …
+Распаковывается nginx-core (1.18.0-0ubuntu1) …
+Выбор ранее не выбранного пакета nginx.
+Подготовка к распаковке …/6-nginx_1.18.0-0ubuntu1_all.deb …
+Распаковывается nginx (1.18.0-0ubuntu1) …
+Настраивается пакет nginx-common (1.18.0-0ubuntu1) …
+Created symlink /etc/systemd/system/multi-user.target.wants/nginx.service → /li
+b/systemd/system/nginx.service.
+Настраивается пакет libnginx-mod-http-xslt-filter (1.18.0-0ubuntu1) …
+Настраивается пакет libnginx-mod-mail (1.18.0-0ubuntu1) …
+Настраивается пакет libnginx-mod-http-image-filter (1.18.0-0ubuntu1) …
+Настраивается пакет libnginx-mod-stream (1.18.0-0ubuntu1) …
+Настраивается пакет nginx-core (1.18.0-0ubuntu1) …
+Настраивается пакет nginx (1.18.0-0ubuntu1) …
+Обрабатываются триггеры для systemd (245.4-4ubuntu3.3) …
+Обрабатываются триггеры для man-db (2.9.1-1) …
+Обрабатываются триггеры для ufw (0.36-6) …
+ivanss@ivanss-VirtualBox:~$ sudo apt-get remove nginx
+Чтение списков пакетов… Готово
+Построение дерева зависимостей       
+Чтение информации о состоянии… Готово
+Следующие пакеты устанавливались автоматически и больше не требуются:
+  libfprint-2-tod1 libnginx-mod-http-image-filter
+  libnginx-mod-http-xslt-filter libnginx-mod-mail libnginx-mod-stream
+  linux-headers-5.4.0-42 linux-headers-5.4.0-42-generic
+  linux-image-5.4.0-42-generic linux-modules-5.4.0-42-generic
+  linux-modules-extra-5.4.0-42-generic nginx-common nginx-core
+Для их удаления используйте «sudo apt autoremove».
+Следующие пакеты будут УДАЛЕНЫ:
+  nginx
+Обновлено 0 пакетов, установлено 0 новых пакетов, для удаления отмечено 1 пакетов, и 26 пакетов не обновлено.
+После данной операции объём занятого дискового пространства уменьшится на 45,1 kB.
+Хотите продолжить? [Д/н] y
+(Чтение базы данных … на данный момент установлено 199123 файла и каталога.)
+Удаляется nginx (1.18.0-0ubuntu1) …
+ivanss@ivanss-VirtualBox:~$ terminal
+
+Команда «terminal» не найдена. Возможно, вы имели в виду:
+
+  command 'qterminal' from deb qterminal (0.14.1-0ubuntu2)
+
+Try: sudo apt install <deb name>
+
+ivanss@ivanss-VirtualBox:~$ snap version
+snap    2.47.1+20.04
+snapd   2.47.1+20.04
+series  16
+ubuntu  20.04
+kernel  5.4.0-56-generic
+ivanss@ivanss-VirtualBox:~$ sudo snap
+[sudo] пароль для ivanss: 
+The snap command lets you install, configure, refresh and remove snaps.
+Snaps are packages that work across many different Linux distributions,
+enabling secure delivery and operation of the latest apps and utilities.
+
+Usage: snap <command> [<options>...]
+
+Commonly used commands can be classified as follows:
+
+        Основное: find, info, install, remove, list
+    ...подробнее: refresh, revert, switch, disable, enable, create-cohort
+         История: changes, tasks, abort, watch
+          Службы: services, start, stop, restart, logs
+     Permissions: connections, interface, connect, disconnect
+    Конфигурация: get, set, unset, wait
+     App Aliases: alias, aliases, unalias, prefer
+  Учётная запись: login, logout, whoami
+       Snapshots: saved, save, check-snapshot, restore, forget
+          Device: model, reboot, recovery
+      Разработка: download, pack, run, try
+       ... Other: warnings, okay, known, ack, version
+
+Для получения дополнительных сведений о команде, выполните 'snap help <команда>'.
+Для показа краткой сводки по всем командам, выполните 'snap help --all'.
+ivanss@ivanss-VirtualBox:~$ snap find ftp
+Название          Версия             Издатель        Примечание  Описание
+nextcloud         20.0.2snap1        nextcloud✓      -           Nextcloud Server - A safe home for all your data
+tor-middle-relay  0.3.5.8-1          chadmiller      -           Infrastructure node for other people's use of Tor network
+sftpclient        3.4.8              sftpclient      -           Transfer files with FTP, FTPS, SFTP and Cloud Services (Including SSH Terminal)
+kate              20.04.0            kde✓            -           KDE Advanced Text Editor
+euruspro-desktop  1.0.29             adrian.higuita  -           euruspro-desktop
+motrix            1.5.15             agalwood        -           A full-featured download manager
+backupz           0.0.5              keygenqt        -           Backupz create backup tar.gz archive
+astiga            0.1.1              koenvh          -           Your online cloud music player.
+wget-simosx       1.19.1             simosx          -           GNU Wget retrieves files using HTTP, HTTPS and FTP
+osync             v1.5.0             creekorful      -           Tool to synchronize in a optimized way a lot of files to a FTP server.
+demo-curl         7.47.0-1ubuntu2.1  woodrow         -           command line tool for transferring data with URL syntax
+demo-wget         1.17.1-2           woodrow         -           retrieves files from the web
+squid-gary        0.3                garywzl77       -           Squid is a caching proxy for the Web supporting HTTP, HTTPS, FTP, and more.
+xbtplotter        1.0                phod            -           Plot XBT profiles.
+pspad             5.0.3.377          mmtrt           -           PSPad is a text editor for developers.
+aria2c            1.35.0             abskmj          -           The next generation download utility
+ftpscan           1.0-1              izznogooood     -           Simple ftp scanning for default username / password.
+bigfile           1.0.10             bigfilefu       -           A file transfer system that supports http, rpc and ftp protocols
+bash-brlin        5.0                brlin           -           The Bourne Again SHell(Bash) (UNOFFICIAL, EXPERIMENTAL)
+curl-simosx       7.65               simosx          -           CLI tool for transferring data with URL syntax (HTTP, HTTPS, etc)
+ivanss@ivanss-VirtualBox:~$ snap find <ftp>
+bash: синтаксическая ошибка рядом с неожиданным маркером «newline»
+ivanss@ivanss-VirtualBox:~$ snap find nextcloud
+Название                   Версия                     Издатель            Примечание  Описание
+nextcloud                  20.0.2snap1                nextcloud✓          -           Nextcloud Server - A safe home for all your data
+spreedme                   0.29.5snap1                nextcloud✓          -           Spreed.ME audio/video calls and conferences feature for the Nextcloud Snap
+onlyoffice-desktopeditors  6.0.2                      onlyoffice✓         -           A comprehensive office suite for editing documents, spreadsheets and presentations
+qownnotes                  20.12.1                    pbek                -           Plain-text file markdown note taking with Nextcloud / ownCloud integration
+authpass                   1.7.9+1604                 hpoul✓              -           Open Source Password Manager with KeePass file support.
+nextcloud-port8080         1.01                       arcticslyfox        -           Nextcloud Server
+nextcloud-snap-abacao      11.0.3snap4                abacao              -           Nextcloud Server
+nextcloud-nextant          11.0.0snap3                rmescandon          -           Nextcloud Server + search support
+nextcloud-abacao           11.0.3snap4                abacao              -           Nextcloud Server
+cashbox-nextcloud          11.0.2snap2                cashbox             -           Nextcloud Server for www.cashBOX.plus
+nextcloudsnap              12.0.4snap1                oscarbrolin         -           Nextcloud Server - A safe home for all your data
+ghostcloud                 0.9.5                      beidl               -           A modern cross-platform client for Nextcloud, ownCloud, WebDav.
+joplin-arnatious           1.0.224                    arnatious           -           Joplin is a free, open source note taking and to-do application.
+htxucloud                  12.0.3snap7                htxu                -           Nextcloud Server
+carnet                     0.22.1                     alexandre-roux-m    -           Powerful note taking app with sync, online editor and android app
+opentodolist               3.28.1                     mhoeher             -           Todo list and note taking application
+xournalpp-mobile           1.1.6                      jasmich             -           Infinitely take notes, sketch and learn
+nextcloud-stondino         15.0.10snap3+git1.ff25cb9  zmusselman          -           Nextcloud Server - A safe home for all your data
+nextcloud-nextbox          19.0.2snap1+git40.8c62064  nitrokey-snapcraft  -           Nitrokey Nextbox Nextcloud Server
+vmcloud-nextcloud          1.0.0                      victoriususm        -           Nextcloud 16.0.3 Optimized-Boosted
+nxcloud                    0+git.64eefeb              budde25             -           A command line client for interacting with Nextcloud
+solr                       0.1                        rmescandon          -           Starts up solr as forking daemon
+mdns-hostname              0.0.1                      welike              -           mDNS mini-daemon to published hostname.local
+feedreader                 0+git.9ac478f7             ken-vandine         -           RSS client for various webservices
+test003-nc                 13.0.4.snap1               reinism             -           Nextcloud Server - A safe home for all your data
+ivanss@ivanss-VirtualBox:~$ sudo snap install nextcloud
+nextcloud 20.0.2snap1 от Nextcloud✓ установлен
+ivanss@ivanss-VirtualBox:~$ nextcloud help
+
+Команда «nextcloud» не найдена, но может быть установлена с помощью:
+
+sudo apt install nextcloud-desktop
+
+ivanss@ivanss-VirtualBox:~$ nextcloud.
+nextcloud.disable-https   nextcloud.import          nextcloud.mysqldump
+nextcloud.enable-https    nextcloud.manual-install  nextcloud.occ
+nextcloud.export          nextcloud.mysql-client    
+ivanss@ivanss-VirtualBox:~$ nextcloud.enable-https 
+chmod: changing permissions of '/tmp/pids': Operation not permitted
+This utility needs to run as root
+ivanss@ivanss-VirtualBox:~$ sudo nextcloud.enable-https 
+Missing subcommand. Run 'nextcloud.enable-https -h' for help.
+ivanss@ivanss-VirtualBox:~$ sudo nextcloud.enable-https -h
+Usage:
+    nextcloud.enable-https -h
+    Display this help message.
+
+    nextcloud.enable-https <subcommand> [OPTIONS]
+    Run the provided subcommand.
+
+Available subcommands:
+    lets-encrypt [OPTIONS]
+    Obtain a certificate from Let's Encrypt and automatically keep it
+    up-to-date.
+
+    self-signed
+    Generate and use a self-signed certificate. This is easier to
+    setup than Let's Encrypt certificates, but will cause warnings in
+    browsers.
+
+    custom [OPTIONS]
+    Use certificates generated by other means.
+ivanss@ivanss-VirtualBox:~$ 
